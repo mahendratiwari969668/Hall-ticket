@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hall Ticket</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="actions">
+    <button id="saveDataBtn" class="action-btn save-btn">Save Data</button>
+    <div class="profiles-wrapper">
+      <button id="profilesBtn" class="action-btn profiles-btn" type="button">Saved Profiles &#9662;</button>
+      <div id="profilesDropdown" class="profiles-dropdown" hidden></div>
+    </div>
+    <button id="newProfileBtn" class="action-btn new-profile-btn" type="button">New Profile</button>
+    <button id="downloadPdfBtn" class="action-btn pdf-btn">Download PDF</button>
+    <button id="resetBtn" class="action-btn reset-btn">Reset Data</button>
+  </div>
+  <p id="saveStatus" class="save-status" role="status" aria-live="polite"></p>
+
+  <div class="page">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-box">
+        <img src="logo.jpeg" alt="College Logo" class="logo">
+      </div>
+
+      <div class="college-info">
+        <h1>SHEAT GROUP OF INSTITUTIONS</h1>
+        <p>15 KM MILESTONE NH-56, AIRPORT ROAD, BABATPUR, VARANASI</p>
+        <h2>Hall Ticket</h2>
+
+        <h3 contenteditable="true" data-field="examSession">
+          PUE EVEN 2025-2026
+        </h3>
+      </div>
+    </header>
+
+    <hr>
+
+    <!-- Candidate Details -->
+    <section class="candidate-section">
+
+      <div class="candidate-details">
+
+        <div class="row">
+          <span>Roll No.</span>
+          <b contenteditable="true" data-field="rollNo"><span class="colon">:</span> 124258090023</b>
+        </div>
+
+        <div class="row">
+          <span>Name of Candidate</span>
+          <b contenteditable="true" data-field="candidateName"><span class="colon">:</span> MAHENDRA TIWARI</b>
+        </div>
+
+        <div class="row">
+          <span>Gender</span>
+          <b contenteditable="true" data-field="gender"><span class="colon">:</span> MALE</b>
+        </div>
+
+        <div class="row">
+          <span>Father's Name</span>
+          <b contenteditable="true" data-field="fatherName"><span class="colon">:</span> NANDLAL TIWARI</b>
+        </div>
+
+        <div class="row">
+          <span>Course</span>
+          <b contenteditable="true" data-field="course"><span class="colon">:</span> BCA - 2</b>
+        </div>
+
+        <div class="row">
+          <span>Semester</span>
+          <b contenteditable="true" data-field="semester"><span class="colon">:</span> SEM 2</b>
+        </div>
+
+      </div>
+
+      <!-- Photo Area -->
+      <div class="photo-box">
+
+        <input type="file" id="photoInput" accept="image/*" hidden>
+        <input type="file" id="signInput" accept="image/*" hidden>
+
+        <img
+          src="candidatee photo.jpeg"
+          alt="Candidate Photo"
+          class="candidate-photo"
+          id="candidatePhoto"
+        >
+
+        <div class="sign-box">
+          <img
+            src="candidate sign.jpeg"
+            alt="Candidate Signature"
+            class="candidate-sign"
+            id="candidateSign"
+          >
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Exam Table -->
+    <section class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>Sr. No</th>
+            <th>Subject Code</th>
+            <th>Subject Name</th>
+            <th>Exam Date</th>
+            <th>Timings</th>
+          </tr>
+        </thead>
+
+        <tbody style="text-transform: uppercase;">
+
+          <tr>
+            <td>1</td>
+            <td contenteditable="true">BCA - S107</td>
+            <td contenteditable="true">DIGITAL ELECTRONICS & COMPUTER ORGANIZATION</td>
+            <td contenteditable="true">30/04/2026</td>
+            <td contenteditable="true">1:30PM - 3:30PM</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td contenteditable="true">BCA - S110</td>
+            <td contenteditable="true">MATHEMATICS - II</td>
+            <td contenteditable="true">30/04/2026</td>
+            <td contenteditable="true">9:30AM - 11:30AM</td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td contenteditable="true">BCA - S106T</td>
+            <td contenteditable="true">C PROGRAMMING</td>
+            <td contenteditable="true">02/05/2026</td>
+            <td contenteditable="true">1:30PM - 3:30PM</td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td contenteditable="true">BCA - S109</td>
+            <td contenteditable="true">FINANCIAL ACCOUNTING & MANAGEMENT</td>
+            <td contenteditable="true">02/05/2026</td>
+            <td contenteditable="true">9:30AM - 11:30AM</td>
+          </tr>
+
+          <tr>
+            <td>5</td>
+            <td contenteditable="true">BCA - S108</td>
+            <td contenteditable="true">ORGANIZATION BEHAVIOUR</td>
+            <td contenteditable="true">04/05/2026</td>
+            <td contenteditable="true">9:30AM - 11:30AM</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Director Signature -->
+    <section class="signature-section">
+      <div class="director-sign">
+        <img src="director sign.jpeg" alt="Director Signature" class="director-sign-img">
+        <p>Director Signature</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p contenteditable="true" data-field="printDateTime">
+        Print Date & Time: 4/28/2026 8:59 pm
+      </p>
+
+      <p contenteditable="true" data-field="pageInfo">
+        Page 1 of 1
+      </p>
+    </footer>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
